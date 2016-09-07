@@ -260,8 +260,11 @@ you should place your code here."
         '((python . t)
             (R . t))
         )
+    (setq rcirc-server-alist
+      '(("irc.freenode.net" :port 6697 :encryption tls
+          :channels ("#rcirc" "#emacs" "#emacswiki"))))
+   (add-hook 'org-mode-hook (electric-pair-mode t))
   )
-
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
